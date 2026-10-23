@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>PM_Service_Report__c</fullName><label>PM Service Report</label><trackTrending>false</trackTrending><type>MasterDetail</type><referenceTo>PM_Service_Report__c</referenceTo><relationshipName>PM_Report_Filter_Audits</relationshipName><relationshipLabel>PM Report Filter Audits</relationshipLabel><relationshipOrder>0</relationshipOrder><reparentableMasterDetail>false</reparentableMasterDetail><writeRequiresMasterRead>false</writeRequiresMasterRead></CustomField>

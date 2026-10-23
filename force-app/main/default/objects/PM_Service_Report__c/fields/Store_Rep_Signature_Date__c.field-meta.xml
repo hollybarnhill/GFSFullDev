@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Store_Rep_Signature_Date__c</fullName><label>Store Representative Signature Date</label><trackTrending>false</trackTrending><type>Date</type><required>false</required></CustomField>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Product_Doors_1_Notes__c</fullName><label>11. Product Doors 1 Notes</label><trackTrending>false</trackTrending><type>TextArea</type><required>false</required></CustomField>

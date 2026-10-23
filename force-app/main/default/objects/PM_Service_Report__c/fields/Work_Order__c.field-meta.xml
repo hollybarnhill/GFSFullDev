@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Work_Order__c</fullName><label>Work Order</label><trackTrending>false</trackTrending><type>Lookup</type><referenceTo>WorkOrder</referenceTo><relationshipName>PM_Service_Reports</relationshipName><relationshipLabel>PM Service Reports</relationshipLabel><required>true</required><deleteConstraint>Restrict</deleteConstraint></CustomField>
