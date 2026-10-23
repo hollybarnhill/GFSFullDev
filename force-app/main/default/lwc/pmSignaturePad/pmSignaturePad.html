@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label">
+            <abbr if:true={required} class="slds-required" title="required">* </abbr>{label}
+        </label>
+        <div class="slds-form-element__control">
+            <canvas class="pad"></canvas>
+        </div>
+        <div class="slds-m-top_x-small">
+            <lightning-button label="Clear" onclick={handleClear}></lightning-button>
+        </div>
+        <div if:true={errorMessage} class="slds-form-element__help slds-text-color_error">{errorMessage}</div>
+    </div>
+</template>
