@@ -53,9 +53,7 @@ export default class PmSignaturePad extends LightningElement {
             this.drawing = false;
             this.value = canvas.toDataURL('image/png');
             this.errorMessage = undefined;
-            this.dispatchEvent(new CustomEvent('lightning__flowattributechange', {
-                detail: { attributeName: 'value', attributeValue: this.value }
-            }));
+            this.dispatchEvent(new CustomEvent('change', { detail: { value: this.value } }));
         };
         canvas.addEventListener('pointerup', end);
         canvas.addEventListener('pointercancel', end);
@@ -65,9 +63,7 @@ export default class PmSignaturePad extends LightningElement {
         const canvas = this.canvas();
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
         this.value = undefined;
-        this.dispatchEvent(new CustomEvent('lightning__flowattributechange', {
-            detail: { attributeName: 'value', attributeValue: undefined }
-        }));
+        this.dispatchEvent(new CustomEvent('change', { detail: { value: undefined } }));
     }
 
     @api

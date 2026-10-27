@@ -1,0 +1,22 @@
+<template>
+    <lightning-quick-action-panel header="PM Report Signatures">
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+        <template if:true={noReport}>
+            <p>No PM Service Report was found for this Work Order. Complete the PM Service Report first.</p>
+        </template>
+        <template if:true={report}>
+            <p class="slds-m-bottom_small">Report {report.Name}</p>
+            <c-pm-signature-pad label="Store Representative Signature" required onchange={handleStoreRep}></c-pm-signature-pad>
+            <div class="slds-m-top_medium">
+                <c-pm-signature-pad label="Service Technician Signature" required onchange={handleTech}></c-pm-signature-pad>
+            </div>
+            <div if:true={errorMessage} class="slds-m-top_small slds-text-color_error">{errorMessage}</div>
+        </template>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Cancel" onclick={handleClose}></lightning-button>
+            <lightning-button if:true={report} class="slds-m-left_x-small" variant="brand" label="Save Signatures" onclick={handleSave} disabled={saving}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

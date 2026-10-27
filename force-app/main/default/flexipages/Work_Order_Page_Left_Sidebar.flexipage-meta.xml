@@ -72,7 +72,7 @@
                             <value>WorkOrder.File_Manager</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>WorkOrder.PM_Service_Report</value>
+                            <value>WorkOrder.PM_Report_Signatures</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>

@@ -556,7 +556,7 @@
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>WorkOrder.PM_Service_Report</actionName>
+            <actionName>WorkOrder.PM_Report_Signatures</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>11</sortOrder>
         </platformActionListItems>
