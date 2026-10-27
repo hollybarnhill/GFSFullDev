@@ -71,6 +71,9 @@
                         <valueListItems>
                             <value>WorkOrder.File_Manager</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>WorkOrder.PM_Service_Report</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
