@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <description>When a Service Appointment becomes Completed or Cannot Complete, copies its Actual Start and Actual End to Time In and Time Out on the PM Service Reports linked to it.</description>
+    <environments>Default</environments>
+    <interviewLabel>PM Report Times On Appointment Close {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PM Report: Copy Times When Appointment Closes</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_PM_Reports</name>
+        <label>Update PM Reports</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Service_Appointment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Time_In__c</field>
+            <value>
+                <elementReference>$Record.ActualStartTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Time_Out__c</field>
+            <value>
+                <elementReference>$Record.ActualEndTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PM_Service_Report__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_PM_Reports</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>StatusCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StatusCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CannotComplete</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StatusCategory</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>ServiceAppointment</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
