@@ -285,7 +285,7 @@
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
         </platformActionListItems>
-    </platformActionList>
+    <platformActionListItems><actionName>ServiceAppointment.PM_Service_Report_Data_Capture</actionName><actionType>QuickAction</actionType><sortOrder>9</sortOrder></platformActionListItems></platformActionList>
     <quickActionList/>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
