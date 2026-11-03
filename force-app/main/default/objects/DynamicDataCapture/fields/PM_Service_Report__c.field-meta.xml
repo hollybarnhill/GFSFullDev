@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PM_Service_Report__c</fullName>
+    <label>PM Service Report</label>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+    <referenceTo>PM_Service_Report__c</referenceTo>
+    <relationshipName>Forms</relationshipName>
+    <relationshipLabel>Forms</relationshipLabel>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <required>false</required>
+    <description>The PM Service Report created from this Form. Lets the PDF template show exactly one report.</description>
+</CustomField>
