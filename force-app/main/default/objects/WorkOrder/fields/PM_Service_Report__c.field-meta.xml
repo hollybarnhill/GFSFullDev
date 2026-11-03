@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PM_Service_Report__c</fullName>
-    <label>PM Service Report</label>
+    <label>Latest PM Service Report</label>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
     <referenceTo>PM_Service_Report__c</referenceTo>
-    <relationshipName>Forms</relationshipName>
-    <relationshipLabel>Forms</relationshipLabel>
+    <relationshipName>Work_Orders_Latest</relationshipName>
+    <relationshipLabel>Work Orders (Latest Report)</relationshipLabel>
     <deleteConstraint>SetNull</deleteConstraint>
     <required>false</required>
-    <description>The PM Service Report created from this Form. Lets the PDF template show exactly one report.</description>
+    <description>Most recent PM Service Report for this Work Order. Set by PM_Report_Link_Child_Rows; lets the PM Service Report PDF template show exactly one report.</description>
 </CustomField>
